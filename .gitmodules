@@ -1,0 +1,7 @@
+[submodule "skills/excalidraw-diagram"]
+	path = skills/excalidraw-diagram
+	url = https://github.com/coleam00/excalidraw-diagram-skill.git
+
+[submodule "skills/obsidian-skills"]
+	path = skills/obsidian-skills
+	url = https://github.com/kepano/obsidian-skills.git

@@ -1,0 +1,69 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+  "agents": {
+    "hephaestus": {
+      "model": "nvidia/deepseek-ai/deepseek-v4-pro"
+    },
+    "oracle": {
+      "model": "nvidia/deepseek-ai/deepseek-v4-pro"
+    },
+    "librarian": {
+      "model": "nvidia/meta/llama-4-maverick"
+    },
+    "explore": {
+      "model": "nvidia/meta/llama-4-maverick"
+    },
+    "multimodal-looker": {
+      "model": "nvidia/meta/llama-4-maverick"
+    },
+    "prometheus": {
+      "model": "nvidia/deepseek-ai/deepseek-v4-pro"
+    },
+    "metis": {
+      "model": "nvidia/deepseek-ai/deepseek-v4-pro"
+    },
+    "momus": {
+      "model": "nvidia/deepseek-ai/deepseek-v4-pro"
+    },
+    "atlas": {
+      "model": "nvidia/moonshotai/kimi-k2-instruct"
+    },
+    "sisyphus-junior": {
+      "model": "nvidia/meta/llama-4-maverick"
+    },
+    "sisyphus": {
+      "model": "nvidia/deepseek-ai/deepseek-v4-pro",
+      "temperature": 0.1,
+      "thinking": {
+        "type": "enabled",
+        "budgetTokens": 32000
+      }
+    }
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "nvidia/z-ai/glm-5"
+    },
+    "ultrabrain": {
+      "model": "nvidia/deepseek-ai/deepseek-v4-pro"
+    },
+    "deep": {
+      "model": "nvidia/deepseek-ai/deepseek-v4-pro"
+    },
+    "artistry": {
+      "model": "nvidia/z-ai/glm-5"
+    },
+    "quick": {
+      "model": "nvidia/meta/llama-4-maverick"
+    },
+    "unspecified-low": {
+      "model": "nvidia/meta/llama-4-maverick"
+    },
+    "unspecified-high": {
+      "model": "nvidia/deepseek-ai/deepseek-v4-pro"
+    },
+    "writing": {
+      "model": "nvidia/z-ai/glm-5"
+    }
+  }
+}

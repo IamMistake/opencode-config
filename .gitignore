@@ -1,0 +1,22 @@
+node_modules/
+.opencode/node_modules/
+**/.git/
+
+# Local runtime/state files
+opencode-quota/
+*.log
+*.tmp
+
+# Backups and generated migration files
+*.bak
+*.bak*
+*.backup*
+*.tui-migration.bak
+
+# Local secrets. Config should use {env:VAR_NAME} references instead.
+.env
+.env.*
+*.secret
+*secrets*
+*password*
+*token*
