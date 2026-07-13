@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A one-sentence description of the project for search engines and social previews.">
+  <meta property="og:title" content="Project Title">
+  <meta property="og:description" content="Same one-sentence description for social sharing.">
+  <meta property="og:url" content="https://username.github.io/repo-name/">
+  <link rel="canonical" href="https://username.github.io/repo-name/">
+  <title>Project Title — Project Subtitle</title>
+
+  <meta name="theme-color" content="#2f46d8">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ====== TABLE OF CONTENTS (fixed sidebar) ====== -->
+  <nav class="toc-section" id="toc" aria-label="Table of Contents">
+    <div class="toc-rail is-collapsed" id="toc-rail">
+      <div class="toc-inner">
+        <button class="toc-head" id="toc-toggle" aria-label="Toggle table of contents">
+          <span class="toc-badge"><i class="fa-solid fa-bars"></i></span>
+          <span class="toc-title"><span class="toc-long">Contents</span></span>
+          <span class="toc-expand"><i class="fa-solid fa-angle-up"></i></span>
+        </button>
+        <div class="toc-links" id="toc-links">
+          <a href="#overview" class="toc-link"><i class="fa-solid fa-compass"></i> Overview</a>
+          <a href="#architecture" class="toc-link"><i class="fa-solid fa-sitemap"></i> Architecture</a>
+          <a href="#pipeline" class="toc-link"><i class="fa-solid fa-list"></i> Pipeline</a>
+          <a href="#results" class="toc-link"><i class="fa-solid fa-chart-bar"></i> Results</a>
+          <a href="#setup" class="toc-link"><i class="fa-solid fa-rocket"></i> Setup</a>
+          <a href="#usage" class="toc-link"><i class="fa-solid fa-terminal"></i> Usage</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====== OTHER WORKS FLOATING BUTTON ====== -->
+  <div class="more-works-container">
+    <button class="more-works-btn" onclick="toggleMoreWorks()" title="Other Projects" aria-label="Other works">
+      <i class="fa-solid fa-flask"></i>
+      <span class="more-works-text">Other Works</span>
+      <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+    </button>
+    <div class="more-works-dropdown" id="moreWorksDropdown">
+      <div class="dropdown-header">
+        <h4>Other Works</h4>
+        <button class="close-btn" onclick="toggleMoreWorks()" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="works-list">
+        <a href="https://github.com/author1" class="work-item" target="_blank" rel="noopener">
+          <div class="work-info">
+            <h5>Author One</h5>
+            <p>GitHub Profile</p>
+            <span class="work-venue">@author1</span>
+          </div>
+          <i class="fa-solid fa-external-link-alt"></i>
+        </a>
+        <a href="https://github.com/author2" class="work-item" target="_blank" rel="noopener">
+          <div class="work-info">
+            <h5>Author Two</h5>
+            <p>GitHub Profile</p>
+            <span class="work-venue">@author2</span>
+          </div>
+          <i class="fa-solid fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== MAIN CONTENT ====== -->
+  <main>
+
+    <!-- ====== HERO ====== -->
+    <section class="hero-banner">
+      <div class="container">
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <span class="pub-eyebrow"><i class="fa-solid fa-graduation-cap"></i> Category &mdash; Project Type</span>
+            <h1 class="pub-title">Project Title</h1>
+            <p class="pub-subtitle">
+              A concise, compelling description of the project. What problem does it solve?
+              What makes it interesting? 2-3 sentences max.
+            </p>
+
+            <div class="hero-meta" aria-label="Project authors and affiliation">
+              <div class="hero-author-row">
+                <a href="https://github.com/author1" target="_blank" rel="noopener">Author One</a>
+                <span class="hero-contribution">Equal Contributor</span>
+              </div>
+              <div class="hero-author-row">
+                <a href="https://github.com/author2" target="_blank" rel="noopener">Author Two</a>
+                <span class="hero-contribution">Equal Contributor</span>
+              </div>
+              <div class="hero-affiliation-row">
+                <span>University / Affiliation</span>
+              </div>
+            </div>
+
+            <div class="pub-links">
+              <a href="#architecture" class="pub-btn">
+                <span class="icon"><i class="fa-solid fa-sitemap"></i></span>
+                Explore the Pipeline
+              </a>
+              <a href="https://github.com/username/repo-name" class="pub-btn pub-btn-secondary"
+                target="_blank" rel="noopener">
+                <span class="icon"><i class="fa-brands fa-github"></i></span>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="metrics-strip">
+          <div class="metric-card">
+            <span class="metric-num">N</span>
+            <div class="metric-label">Stat One</div>
+          </div>
+          <div class="metric-card">
+            <span class="metric-num">N</span>
+            <div class="metric-label">Stat Two</div>
+          </div>
+          <div class="metric-card">
+            <span class="metric-num">N</span>
+            <div class="metric-label">Stat Three</div>
+          </div>
+          <div class="metric-card">
+            <span class="metric-num">N</span>
+            <div class="metric-label">Stat Four</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== OVERVIEW ====== -->
+    <section id="overview" class="section">
+      <div class="container">
+        <span class="rm-eyebrow"><i class="fa-solid fa-compass"></i> Abstract</span>
+        <h2 class="rm-section-title">Overview</h2>
+        <p class="rm-section-sub">
+          Describe the problem the project solves. What gap does it address?
+          Why should someone care?
+        </p>
+
+        <div class="abstract-box">
+          <p>
+            <strong>Project Name</strong> solves this by [approach summary].
+            Instead of [old approach], the system [new approach].
+          </p>
+          <p>
+            The system is evaluated against [benchmark / dataset / criteria].
+          </p>
+        </div>
+
+        <div class="pillars">
+          <div class="pillar">
+            <div class="pillar-icon pi-real">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <h4>Capability One</h4>
+            <p>Description of the first key capability or component of the system.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon pi-multi">
+              <i class="fa-solid fa-project-diagram"></i>
+            </div>
+            <h4>Capability Two</h4>
+            <p>Description of the second key capability.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon pi-batch">
+              <i class="fa-solid fa-scroll"></i>
+            </div>
+            <h4>Capability Three</h4>
+            <p>Description of the third key capability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== ARCHITECTURE ====== -->
+    <section id="architecture" class="section rm-bg-soft">
+      <div class="container">
+        <span class="rm-eyebrow"><i class="fa-solid fa-sitemap"></i> Architecture</span>
+        <h2 class="rm-section-title">System Design</h2>
+        <p class="rm-section-sub">
+          Describe the architecture. How do the components fit together?
+          What patterns are used? What are the key design decisions?
+        </p>
+
+        <figure class="pipeline-figure">
+          <svg viewBox="0 0 800 300" width="800" height="300" class="pipeline-svg">
+            <defs>
+              <linearGradient id="g-box-1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#f6f8ff"/>
+                <stop offset="100%" stop-color="#edf4ff"/>
+              </linearGradient>
+              <marker id="g-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                <path d="M0,0 L10,5 L0,10 Z" fill="#2f46d8"/>
+              </marker>
+            </defs>
+            <rect x="0" y="0" width="800" height="300" rx="16" fill="#fbfcff" stroke="#e2e8f0" stroke-width="1"/>
+            <rect x="50" y="50" width="180" height="60" rx="10" fill="url(#g-box-1)" stroke="#d0d9f5" stroke-width="1.5"/>
+            <text x="140" y="85" text-anchor="middle" fill="#2f46d8" font-size="12" font-weight="700">Input</text>
+            <line x1="230" y1="80" x2="280" y2="80" stroke="#2f46d8" stroke-width="1.5" marker-end="url(#g-arrow)"/>
+            <rect x="290" y="50" width="180" height="60" rx="10" fill="url(#g-box-1)" stroke="#d0d9f5" stroke-width="1.5"/>
+            <text x="380" y="85" text-anchor="middle" fill="#2f46d8" font-size="12" font-weight="700">Processing</text>
+            <line x1="470" y1="80" x2="520" y2="80" stroke="#2f46d8" stroke-width="1.5" marker-end="url(#g-arrow)"/>
+            <rect x="530" y="50" width="180" height="60" rx="10" fill="url(#g-box-1)" stroke="#d0d9f5" stroke-width="1.5"/>
+            <text x="620" y="85" text-anchor="middle" fill="#2f46d8" font-size="12" font-weight="700">Output</text>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ====== PIPELINE ====== -->
+    <section id="pipeline" class="section">
+      <div class="container">
+        <span class="rm-eyebrow"><i class="fa-solid fa-list"></i> Steps</span>
+        <h2 class="rm-section-title">Pipeline Steps</h2>
+        <p class="rm-section-sub">
+          Describe the pipeline or workflow. Each step reads from and writes back to a shared context.
+        </p>
+
+        <div class="flow-steps">
+          <div class="flow-step" style="--fs-color:#2f46d8">
+            <span class="fs-num">1</span>
+            <div class="fs-content">
+              <h4>Step One</h4>
+              <p>Description of the first step. What does it do? What are the inputs and outputs?</p>
+              <p style="margin-top:6px;font-size:0.78rem;color:var(--rm-primary);font-weight:600">Tech &middot; Stack &middot; Tags</p>
+            </div>
+          </div>
+          <div class="flow-step" style="--fs-color:#14b8a6">
+            <span class="fs-num">2</span>
+            <div class="fs-content">
+              <h4>Step Two</h4>
+              <p>Description of the second step.</p>
+              <p style="margin-top:6px;font-size:0.78rem;color:var(--rm-primary);font-weight:600">Tech &middot; Stack &middot; Tags</p>
+            </div>
+          </div>
+          <div class="flow-step" style="--fs-color:#f59e0b">
+            <span class="fs-num">3</span>
+            <div class="fs-content">
+              <h4>Step Three</h4>
+              <p>Description of the third step.</p>
+              <p style="margin-top:6px;font-size:0.78rem;color:var(--rm-primary);font-weight:600">Tech &middot; Stack &middot; Tags</p>
+            </div>
+          </div>
+          <div class="flow-step" style="--fs-color:#a855f7">
+            <span class="fs-num">4</span>
+            <div class="fs-content">
+              <h4>Step Four</h4>
+              <p>Description of the fourth step.</p>
+              <p style="margin-top:6px;font-size:0.78rem;color:var(--rm-primary);font-weight:600">Tech &middot; Stack &middot; Tags</p>
+            </div>
+          </div>
+          <div class="flow-step" style="--fs-color:#059669">
+            <span class="fs-num">5</span>
+            <div class="fs-content">
+              <h4>Step Five</h4>
+              <p>Description of the fifth step.</p>
+              <p style="margin-top:6px;font-size:0.78rem;color:var(--rm-primary);font-weight:600">Tech &middot; Stack &middot; Tags</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== RESULTS ====== -->
+    <section id="results" class="section rm-bg-soft">
+      <div class="container">
+        <span class="rm-eyebrow"><i class="fa-solid fa-chart-bar"></i> Evaluation</span>
+        <h2 class="rm-section-title">Pipeline Results</h2>
+        <p class="rm-section-sub">
+          Describe the evaluation setup and key results. What metrics were used?
+          How does the system compare to baselines?
+        </p>
+
+        <div class="results-grid">
+          <div class="result-chart">
+            <figure>
+              <table class="rm-table">
+                <thead>
+                  <tr><th colspan="4">Metric A</th></tr>
+                  <tr><th>Configuration</th><th>@1</th><th>@5</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Approach 1</td><td>0.00</td><td>0.00</td></tr>
+                  <tr><td>Approach 2</td><td>0.00</td><td>0.00</td></tr>
+                </tbody>
+              </table>
+            </figure>
+          </div>
+          <div class="result-table-wrap">
+            <table class="rm-table">
+              <thead>
+                <tr><th colspan="4">Metric B</th></tr>
+                <tr><th>Configuration</th><th>@1</th><th>@5</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Approach 1</td><td>0.00</td><td>0.00</td></tr>
+                <tr><td>Approach 2</td><td>0.00</td><td>0.00</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SETUP ====== -->
+    <section id="setup" class="section">
+      <div class="container">
+        <span class="rm-eyebrow"><i class="fa-solid fa-rocket"></i> Setup</span>
+        <h2 class="rm-section-title">Getting Started</h2>
+        <p class="rm-section-sub">Install and configure the project in a few steps.</p>
+
+        <div class="quickstart-grid">
+          <div class="qs-card">
+            <div class="qs-icon"><i class="fa-solid fa-box"></i></div>
+            <h4>Requirements</h4>
+            <pre><code class="language-bash">pip install -r requirements.txt</code></pre>
+          </div>
+          <div class="qs-card">
+            <div class="qs-icon"><i class="fa-solid fa-key"></i></div>
+            <h4>Configuration</h4>
+            <pre><code class="language-bash">export API_KEY=your-key-here</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== USAGE ====== -->
+    <section id="usage" class="section rm-bg-soft">
+      <div class="container">
+        <span class="rm-eyebrow"><i class="fa-solid fa-terminal"></i> Commands</span>
+        <h2 class="rm-section-title">CLI Usage</h2>
+        <p class="rm-section-sub">
+          Describe the main commands and how to use them.
+        </p>
+
+        <div class="quickstart-grid">
+          <div class="qs-card">
+            <div class="qs-icon"><i class="fa-solid fa-cube"></i></div>
+            <h4>Command Name</h4>
+            <pre><code class="language-bash">command --flag value</code></pre>
+            <p style="color:var(--rm-sub);font-size:0.85rem;margin-top:8px">Description of what this command does.</p>
+          </div>
+          <div class="qs-card">
+            <div class="qs-icon"><i class="fa-solid fa-play"></i></div>
+            <h4>Command Name</h4>
+            <pre><code class="language-bash">command --flag value</code></pre>
+            <p style="color:var(--rm-sub);font-size:0.85rem;margin-top:8px">Description of what this command does.</p>
+          </div>
+          <div class="qs-card">
+            <div class="qs-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h4>Command Name</h4>
+            <pre><code class="language-bash">command --flag value</code></pre>
+            <p style="color:var(--rm-sub);font-size:0.85rem;margin-top:8px">Description of what this command does.</p>
+          </div>
+          <div class="qs-card">
+            <div class="qs-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <h4>Command Name</h4>
+            <pre><code class="language-bash">command --flag value</code></pre>
+            <p style="color:var(--rm-sub);font-size:0.85rem;margin-top:8px">Description of what this command does.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">
+          <strong>Project Name</strong>
+          &middot; Institution &middot;
+          <a href="https://github.com/username/repo-name" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ====== SCRIPTS ====== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

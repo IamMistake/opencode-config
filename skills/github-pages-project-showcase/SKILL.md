@@ -7,15 +7,53 @@ description: Use when creating or updating a polished static GitHub Pages site t
 
 Build a polished, responsive, one-page GitHub Pages site that explains a project clearly to reviewers, recruiters, collaborators, or users.
 
-Use the Academic Project Page Template as design inspiration and as an optional starting point:
-
-https://github.com/eliahuhorwitz/Academic-project-page-template/tree/master
-
 The result should feel like a technical academic-project page with product-level polish, similar in spirit to:
 
-https://iammistake.github.io/ai-ad-request-safety-pipeline/
+https://iammistake.github.io/graphrag-pipeline/
 
 Prefer semantic HTML, CSS, vanilla JavaScript, and SVG. Avoid heavy frameworks unless the repository already uses one or the user requests it.
+
+## Template
+
+A reusable template is available at `@template/`. It provides a clean starting point with:
+
+- `index.html` — full page structure with placeholder content marking every section that needs project-specific text
+- `style.css` — complete stylesheet with CSS variables for easy color/theming changes
+- `script.js` — TOC toggle, IntersectionObserver active-section tracking, Other Works dropdown, fade-in animations
+- `.nojekyll` — required for plain static GitHub Pages deployment
+
+**How to use the template:**
+
+1. Copy all files from `@template/` into the project's working directory.
+2. Replace placeholder content in `index.html` with project-specific text, links, author info, and sections. Every section is pre-structured with generic placeholder text — just overwrite the obvious placeholder content.
+3. Adjust CSS variables in `style.css` (`:root` block) to match the project's visual identity.
+4. Add or remove sections as needed (the template includes Overview, Architecture, Pipeline, Results, Setup, Usage).
+5. Replace the architecture SVG diagram with a project-specific diagram.
+6. Update the TOC links in `index.html` to match the actual sections.
+7. Update the Other Works dropdown links with real related projects/profiles.
+8. Team info goes in the hero metadata row (authors, affiliations, contribution badges) — no separate Team section.
+
+The template is derived from the **GraphRAG Pipeline** project page (`graphrag-pipeline`). It includes:
+
+- Single-column centered hero with gradient title, eyebrow badge, author rows, and CTA buttons
+- Metrics strip with gradient-number stat cards below the hero
+- Overview section with TL;DR abstract box and three-column capability pillars
+- Architecture section with SVG diagram placeholder
+- Pipeline section with two-column flow step cards (colored step numbers)
+- Results section with comparison tables
+- Setup section with quick-start cards and code blocks (highlight.js)
+- Usage section with CLI command cards
+- Footer with repo link and institution
+- Floating TOC pill (top-left) with glass effect, gradient left border, collapsible links with `is-active` gradient state
+- Other Works floating button (bottom-right) with dark gradient, dropdown with close button and work items
+- Fade-in scroll animations via IntersectionObserver
+- Font Awesome icons throughout
+- Responsive layout (desktop → tablet → mobile)
+- `prefers-reduced-motion` support
+
+Use the Academic Project Page Template as additional design inspiration:
+
+https://github.com/eliahuhorwitz/Academic-project-page-template/tree/master
 
 ## 1. Ask only missing questions
 
@@ -133,29 +171,30 @@ The hero visual should explain the system, workflow, model, or project concept i
 
 ## 5. Persistent navigation UI
 
-### Contents sidebar
+### Contents TOC pill
 
-Add a fixed, collapsible **Contents** sidebar on the left side of the page.
+Add a fixed, collapsible **Contents** pill in the top-left corner of the page.
 
 It must:
 
 - list and link to every major page section
-- highlight the currently visible section
-- collapse into a compact button
+- highlight the currently visible section with a gradient `is-active` state
+- collapse into a compact button showing only the badge + title + chevron
 - remain accessible while scrolling
 - use smooth scrolling
 - preserve keyboard accessibility
 - adapt, collapse, or hide appropriately on smaller screens
+- use a glass-effect card with a gradient left border
 
 Use `IntersectionObserver` or an equivalent lightweight approach for active-section tracking.
 
-The Contents sidebar is the page's primary table of contents.
+The Contents pill is the page's primary table of contents.
 
 ### Other Works button
 
-Add a separate fixed **Other Works** button in the bottom-right corner.
+Add a separate fixed **Other Works** button in the bottom-right corner with a dark gradient background.
 
-When clicked, it toggles a compact dropdown or popover containing related projects, products, portfolios, organizations, or author profiles.
+When clicked, it toggles a compact dropdown containing related projects, products, portfolios, organizations, or author profiles. The dropdown should have a close button in its header.
 
 Each item should include:
 
@@ -165,7 +204,7 @@ Each item should include:
 
 The component must:
 
-- remain separate from the Contents sidebar
+- remain separate from the Contents pill
 - stay fixed in the bottom-right corner
 - open and close on click
 - close when clicking outside
@@ -182,11 +221,10 @@ Examples of suitable items:
 - a related project page
 - the broader product or organization behind the project
 
-For the AI Ad Request Safety Pipeline example, suitable items include:
+For the GraphRAG Pipeline example, suitable items include:
 
-- GitHub - Nikola's GitHub profile
-- Adstract AI - Nikola's AI ad network and the product protected by the pipeline
-- `https://adstract.ai`
+- AI Ad Request Safety Pipeline — related project
+- GitHub — Nikola's GitHub profile
 
 Other Works is persistent secondary navigation, not a page section and not part of the Contents list.
 
@@ -232,6 +270,8 @@ Use:
 - the correct canonical GitHub Pages URL
 - the correct repository and author links
 - `.nojekyll` for a plain static GitHub Pages deployment
+- Font Awesome CDN (`https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css`) for icons
+- highlight.js CDN (`https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js`) for code block syntax highlighting
 
 Keep JavaScript limited to useful interactions such as:
 
@@ -291,9 +331,9 @@ The work is complete only when:
 - no unsupported roadmap wording appears
 - authors, affiliations, contributions, and links are accurate
 - statistics are either verified or omitted
-- all major sections appear in the Contents sidebar
-- the Contents sidebar collapses and tracks the active section
-- the Other Works button is fixed in the bottom-right and opens a real-links-only popover
+- all major sections appear in the Contents TOC pill
+- the Contents TOC pill collapses and tracks the active section with `is-active` gradient state
+- the Other Works button is fixed in the bottom-right and opens a real-links-only dropdown
 - Other Works does not appear as a main page section
 - the layout works on desktop and mobile
 - keyboard navigation and visible focus states work

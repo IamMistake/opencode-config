@@ -2,68 +2,63 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
   "agents": {
     "hephaestus": {
-      "model": "nvidia/deepseek-ai/deepseek-v4-pro"
+      "model": "opencode/deepseek-v4-flash-free"
     },
     "oracle": {
-      "model": "nvidia/deepseek-ai/deepseek-v4-pro"
+      "model": "opencode/deepseek-v4-flash-free"
     },
     "librarian": {
-      "model": "nvidia/meta/llama-4-maverick"
+      "model": "opencode/deepseek-v4-flash-free"
     },
     "explore": {
-      "model": "nvidia/meta/llama-4-maverick"
+      "model": "opencode/deepseek-v4-flash-free"
     },
     "multimodal-looker": {
-      "model": "nvidia/meta/llama-4-maverick"
+      "model": "opencode/deepseek-v4-flash-free"
     },
     "prometheus": {
-      "model": "nvidia/deepseek-ai/deepseek-v4-pro"
+      "model": "opencode/deepseek-v4-flash-free"
     },
     "metis": {
-      "model": "nvidia/deepseek-ai/deepseek-v4-pro"
+      "model": "opencode/deepseek-v4-flash-free"
     },
     "momus": {
-      "model": "nvidia/deepseek-ai/deepseek-v4-pro"
+      "model": "opencode/deepseek-v4-flash-free"
     },
     "atlas": {
-      "model": "nvidia/moonshotai/kimi-k2-instruct"
+      "model": "opencode/deepseek-v4-flash-free"
     },
     "sisyphus-junior": {
-      "model": "nvidia/meta/llama-4-maverick"
+      "model": "opencode/deepseek-v4-flash-free"
     },
     "sisyphus": {
-      "model": "nvidia/deepseek-ai/deepseek-v4-pro",
-      "temperature": 0.1,
-      "thinking": {
-        "type": "enabled",
-        "budgetTokens": 32000
-      }
+      "model": "opencode/deepseek-v4-flash-free"
     }
   },
   "categories": {
     "visual-engineering": {
-      "model": "nvidia/z-ai/glm-5"
+      "model": "opencode/deepseek-v4-flash-free"
     },
     "ultrabrain": {
-      "model": "nvidia/deepseek-ai/deepseek-v4-pro"
+      "model": "opencode/deepseek-v4-flash-free"
     },
     "deep": {
-      "model": "nvidia/deepseek-ai/deepseek-v4-pro"
+      "model": "opencode/deepseek-v4-flash-free"
     },
     "artistry": {
-      "model": "nvidia/z-ai/glm-5"
+      "model": "opencode/deepseek-v4-flash-free"
     },
     "quick": {
-      "model": "nvidia/meta/llama-4-maverick"
+      "model": "opencode/deepseek-v4-flash-free"
     },
     "unspecified-low": {
-      "model": "nvidia/meta/llama-4-maverick"
+      "model": "opencode/deepseek-v4-flash-free"
     },
     "unspecified-high": {
-      "model": "nvidia/deepseek-ai/deepseek-v4-pro"
+      "model": "opencode/deepseek-v4-flash-free"
     },
     "writing": {
-      "model": "nvidia/z-ai/glm-5"
+      "model": "opencode/deepseek-v4-flash-free"
     }
   }
 }
