@@ -1,6 +1,6 @@
 ---
 name: github-pages-project-showcase
-description: Use when creating or updating a polished static GitHub Pages site that explains a software or research project.
+description: Use when creating, updating, or polishing a static GitHub Pages project showcase for a software, AI, research, academic, portfolio, or open-source project. Use this whenever the user wants a project page, repo website, demo page, portfolio-style project writeup, or GitHub Pages deployment, even if they do not explicitly say "showcase."
 ---
 
 # GitHub Pages Project Showcase
@@ -23,6 +23,8 @@ A reusable template is available at `@template/`. It provides a clean starting p
 - `.nojekyll` — required for plain static GitHub Pages deployment
 
 **How to use the template:**
+
+Do not modify the bundled `@template/` files directly. Copy them into the target project, then adapt the copied files.
 
 1. Copy all files from `@template/` into the project's working directory.
 2. Replace placeholder content in `index.html` with project-specific text, links, author info, and sections. Every section is pre-structured with generic placeholder text — just overwrite the obvious placeholder content.
@@ -58,6 +60,19 @@ https://github.com/eliahuhorwitz/Academic-project-page-template/tree/master
 ## 1. Ask only missing questions
 
 Before building, inspect the user's request and repository context. Ask only questions whose answers are still missing.
+
+As you inspect the available sources, make a private content inventory:
+
+- confirmed project title
+- one-sentence summary
+- actual features and capabilities
+- architecture, method, pipeline, or data flow
+- supported setup and usage commands
+- verified examples, results, metrics, or comparisons
+- real author, organization, repository, demo, and profile links
+- unknowns that require a user answer
+
+Use this inventory to avoid both over-asking and unsupported claims. If the repository already answers a question, do not ask it again.
 
 Ask:
 
@@ -138,6 +153,15 @@ Optional sections may include:
 Do not add a citation or BibTeX section.
 
 Statistics are optional. Only include them when the user requests them and they are grounded in repository material or user-provided data.
+
+Adapt the same template to the project type:
+
+- For libraries, emphasize installation, API examples, compatibility, and a small working example.
+- For research projects, emphasize abstract, method, architecture, evaluation, and reproducibility.
+- For apps or products, emphasize user workflow, screenshots or demo, features, and setup.
+- For infrastructure, developer tools, or CLIs, emphasize architecture, commands, integrations, and operational model.
+
+If a metric, benchmark, dataset result, or comparison is not verified, remove the metric card or convert it into a qualitative capability card. Do not keep fake-looking numbers just because the template includes stat slots.
 
 ## 4. Design direction
 
@@ -273,6 +297,8 @@ Use:
 - Font Awesome CDN (`https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css`) for icons
 - highlight.js CDN (`https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js`) for code block syntax highlighting
 
+After adapting the copied template, search generated files for leftover placeholder text such as `Project Title`, `Project Subtitle`, `Author One`, `Author Two`, `repo-name`, `username`, `Capability One`, `Stat One`, `N`, and generic bracketed prose. Replace it, remove it, or ask the user for the missing value rather than shipping placeholders.
+
 Keep JavaScript limited to useful interactions such as:
 
 - Contents collapse and expansion
@@ -284,6 +310,8 @@ Keep JavaScript limited to useful interactions such as:
 - copy buttons where useful
 
 Do not add a framework for interactions that can be implemented clearly in vanilla JavaScript.
+
+Ensure copied and adapted interactive controls have accurate labels, keyboard behavior, visible focus states, and correct expanded or collapsed state where practical.
 
 A separate `DESIGN.md` is optional. Create one only when the project has a substantial custom design system that benefits from documentation.
 
@@ -322,6 +350,19 @@ When deployment is requested:
 7. report the final Pages URL and repository URL
 
 ## 10. Completion criteria
+
+Before the final response, verify the static page locally when feasible, or inspect the generated files directly when a local server/browser is not available.
+
+Check that:
+
+- `index.html`, `style.css`, `script.js`, and `.nojekyll` exist in the page output
+- all Contents TOC links point to existing section IDs
+- all external links are real and intentional
+- no template placeholder text remains
+- local assets use relative paths and resolve
+- responsive behavior is covered by the CSS and works on narrow screens when inspectable
+- interactive controls have keyboard-accessible behavior and visible focus states
+- unsupported metric cards, fake results, and generic filler text were removed
 
 The work is complete only when:
 
