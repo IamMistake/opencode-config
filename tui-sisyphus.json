@@ -3,5 +3,8 @@
   "theme": "system",
   "plugin": [
     "oh-my-openagent@latest"
-  ]
+  ],
+  "plugin_enabled": {
+    "opencode-mini-session": false
+  }
 }
