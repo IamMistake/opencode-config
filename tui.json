@@ -2,6 +2,6 @@
   "$schema": "https://opencode.ai/tui.json",
   "theme": "system",
   "plugin": [
-    "opencode-mini-session@1.1.3"
+    "opencode-mini-session"
   ]
 }
