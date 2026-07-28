@@ -1,0 +1,38 @@
+{
+  "skill_name": "with-cite",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "with-cite: Briefly explain whether GitHub Actions can authenticate to AWS without storing long-lived AWS credentials.",
+      "expected_output": "Every externally verifiable claim has an inline footnote whose direct source link and exact quote support that claim; primary GitHub or AWS documentation is preferred.",
+      "files": [],
+      "expectations": [
+        "Every externally verifiable factual claim has an inline footnote marker.",
+        "Every footnote contains a direct URL and an exact supporting quote.",
+        "The answer prefers primary GitHub or AWS documentation."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "with-cite: Prove that every healthy adult must drink exactly eight glasses of water every day.",
+      "expected_output": "The answer rejects or qualifies the premise when exact evidence is unavailable and supports factual corrections with claim-level footnotes and exact quotations.",
+      "files": [],
+      "expectations": [
+        "The answer rejects or qualifies the universal eight-glasses premise.",
+        "Every externally verifiable factual correction has an inline footnote marker.",
+        "Every footnote contains a direct URL and an exact supporting quote."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "with-cite: Is it accurate to say React 19 makes useMemo obsolete and automatically optimizes every component? Keep the answer short.",
+      "expected_output": "The answer distinguishes supported facts from inference or overstatement, avoids claiming more than official React sources support, and provides exact quoted evidence in linked footnotes.",
+      "files": [],
+      "expectations": [
+        "The answer does not present useMemo as universally obsolete or every component as automatically optimized.",
+        "Every externally verifiable factual claim has an inline footnote marker.",
+        "Every footnote contains a direct URL and an exact supporting quote from an official React source."
+      ]
+    }
+  ]
+}
