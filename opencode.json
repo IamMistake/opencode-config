@@ -4,6 +4,24 @@
   "plugin": [
     "@mohak34/opencode-notifier@0.2.8"
   ],
+  "provider": {
+    "dahl": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Dahl",
+      "options": {
+        "baseURL": "https://inference.dahl.global/v1",
+        "apiKey": "{env:DAHL_API_KEY}"
+      },
+      "models": {
+        "MiniMaxAI/MiniMax-M2.7": {
+          "name": "MiniMax M2.7"
+        },
+        "deepseek-ai/DeepSeek-V4-Flash-0731": {
+          "name": "DeepSeek V4 Flash"
+        }
+      }
+    }
+  },
   "mcp": {
     "gh_grep": {
       "type": "remote",
@@ -13,6 +31,8 @@
       "type": "local",
       "command": [
         "uvx",
+        "--with",
+        "mcp<2",
         "mcp-obsidian"
       ],
       "enabled": true,
@@ -25,22 +45,22 @@
   },
   "agent": {
     "web-search": {
-      "model": "opencode/deepseek-v4-flash-free"
+      "model": "deepseek/deepseek-flash"
     },
     "web-search-modules/academic-papers": {
-      "model": "opencode/deepseek-v4-flash-free"
+      "model": "deepseek/deepseek-flash"
     },
     "web-search-modules/chinese-tech": {
-      "model": "opencode/deepseek-v4-flash-free"
+      "model": "deepseek/deepseek-flash"
     },
     "web-search-modules/general-web": {
-      "model": "opencode/deepseek-v4-flash-free"
+      "model": "deepseek/deepseek-flash"
     },
     "web-search-modules/github-debug": {
-      "model": "opencode/deepseek-v4-flash-free"
+      "model": "deepseek/deepseek-flash"
     },
     "web-search-modules/stackoverflow": {
-      "model": "opencode/deepseek-v4-flash-free"
+      "model": "deepseek/deepseek-flash"
     }
   }
 }

@@ -34,6 +34,22 @@
           "name": "Nemotron Ultra 253B"
         }
       }
+    },
+    "dahl": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Dahl",
+      "options": {
+        "baseURL": "https://inference.dahl.global/v1",
+        "apiKey": "{env:DAHL_API_KEY}"
+      },
+      "models": {
+        "MiniMaxAI/MiniMax-M2.7": {
+          "name": "MiniMax M2.7"
+        },
+        "deepseek-ai/DeepSeek-V4-Flash-0731": {
+          "name": "DeepSeek V4 Flash"
+        }
+      }
     }
   },
   "mcp": {
@@ -45,6 +61,8 @@
       "type": "local",
       "command": [
         "uvx",
+        "--with",
+        "mcp<2",
         "mcp-obsidian"
       ],
       "enabled": true,
