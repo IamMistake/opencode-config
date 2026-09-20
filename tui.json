@@ -3,5 +3,15 @@
   "theme": "system",
   "plugin": [
     "opencode-mini-session"
-  ]
+  ],
+  "plugin_enabled": {
+    "opencode-mini-session": false
+  },
+  "attention": {
+    "enabled": true,
+    "notifications": false,
+    "sound": true,
+    "volume": 0.3,
+    "sound_pack": "opencode.default"
+  }
 }

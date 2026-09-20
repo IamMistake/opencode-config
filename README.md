@@ -5,15 +5,6 @@ Personal OpenCode configuration and agent setup.
 ## Profiles
 
 - `opencode` uses `opencode.json` and `tui.json`.
-- `opensis` uses `opencode-sisyphus.json` and `tui-sisyphus.json`.
-
-The `opensis` shell alias is defined outside this repo in `~/.zshrc`:
-
-```sh
-OPENCODE_CONFIG=$HOME/.config/opencode/opencode-sisyphus.json \
-OPENCODE_TUI_CONFIG=$HOME/.config/opencode/tui-sisyphus.json \
-opencode
-```
 
 ## Secrets
 

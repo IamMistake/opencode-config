@@ -1,9 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "autoupdate": false,
-  "plugin": [
-    "@mohak34/opencode-notifier@0.2.8"
-  ],
   "provider": {
     "dahl": {
       "npm": "@ai-sdk/openai-compatible",

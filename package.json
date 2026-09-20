@@ -1,5 +1,16 @@
 {
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@opencode/client": "2.0.5",
+    "@opencode/plugin": "2.0.5",
+    "@opentui/core": "0.5.10",
+    "@opentui/solid": "0.5.10",
+    "solid-js": "^1.9.9",
+    "typescript": "^5.9.3"
+  },
   "dependencies": {
-    "@opencode-ai/plugin": "1.4.7"
+    "@opencode-ai/plugin": "1.18.31"
   }
 }
